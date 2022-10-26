@@ -1,0 +1,18 @@
+body {
+    opacity: 0;
+
+    animation-name: mainAnime;
+    animation-duration: 3s;
+    /* animation-delay: 1s; */
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mainAnime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

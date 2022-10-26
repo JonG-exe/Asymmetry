@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="author" href="http://facebook.com/JonathanNMGray">
+    <link rel="stylesheet" href="css/indexStyles.css">
+    <link rel="icon" href="images/favicon.jpg">
+
+    <link rel="stylesheet" href="css/mainFadeStyles.css">
+    
+    <%-head%>
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- <li id="logo"><a href="/">Asy</a></li> -->
+            <li ><a href="/"><div id="logo"></div></a></li>
+
+            <li class="li" id="firstAnchor"><a class="anchor" href="/">Travel</a></li>
+            <li class="li"><a class="anchor" href="/memories">Memories</a></li>
+            <li class="li"><a class="anchor" href="/book">Book</a></li>
+            <li class="li" id="signUp"><a class="anchor" href="/login"><img src="images/profile icon.png" alt="profile icon"></a></li>
+        </ul>
+        
+        <div id="right-bar_1"></div>
+    </nav>
+    <%- body %>
+</body>
+
+<script>
+
+    let anchors = document.getElementsByClassName("anchor");
+    let currHref = window.location.href;
+    let currAnchor;
+
+    for(let i = 0; i < anchors.length; i++){
+
+        if(currHref == anchors[i].href){
+            anchors[i].style.borderBottom = "4px solid orange";
+            currAnchor = anchors[i];
+        }
+
+        anchors[i].addEventListener("mouseover", () => {
+            anchors[i].style.borderBottom = "4px solid orange";
+            currAnchor.style.borderBottom = "";
+        })
+
+        anchors[i].addEventListener("mouseout", () => {
+            anchors[i].style.borderBottom = "";
+            currAnchor.style.borderBottom = "4px solid orange";
+        })
+    }
+</script>
+

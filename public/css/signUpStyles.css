@@ -1,0 +1,46 @@
+@import url("loginStyles.css");
+
+h1{
+    margin-top: 45px;
+}
+
+#container {
+    /* height: 90%; */
+    position: absolute;
+    top: 7%;
+}
+
+#signup-button {
+    color: black;
+    font-family: "Quattrocento Sans";
+    font-size: 0.9em;
+
+    width: 40%;
+    margin: 20px 0;
+    /* position: relative;
+    transform: translate(74%, 25px); */
+
+    padding: 5px 0;
+    border: 2px solid orange;
+    border-radius: 20px;
+    background-color: orange;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#login-button {
+    color: grey;
+    font-family: "Quattrocento Sans";
+    font-size: 0.8em;
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 0;
+    /* position: relative;
+    transform: translate(46%, 100px); */
+}
+
+#login-button:visited {
+    color: grey;
+}

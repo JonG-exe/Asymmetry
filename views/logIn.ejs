@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- contentFor("head") %>
+        <link rel="stylesheet" type="text/css" href="css/loginStyles.css">
+        <title>Login | Asymmetry</title>
+    </head>
+    <body>  
+        <%- contentFor("body") %>
+
+        <main id="container">
+
+            <h1>Asymmetry</h1>
+
+            <form method="POST" action="/login">
+                <label>Email</label><input name="email" type="email" placeholder="eg@newmail.com">
+                <label>Password</label><input name="password" type="password" placeholder="••••••••••••••">
+                
+            <div id="buttons">
+
+                <button id="login">Log In</button>
+
+
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+
+                <a id="signupAnchor" href="/signUp">Sign Up</a>
+
+                
+            </div>
+        </form>
+
+        </main>
+    </body>
+</html>

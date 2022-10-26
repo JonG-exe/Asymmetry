@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- contentFor("head") %>
+        <title>Login Page</title>
+        <style type="text/css">
+            #profile-icon {
+                width: 27px;
+                display: inline;
+            }
+
+            h1 {
+                display: inline;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>  
+        <%- contentFor("body") %>
+        <img id="profile-icon" src="images/profile icon.png" alt="profile icon photo">
+        <h1>Profile</h1>
+        <p>Welcome to your profile page <%= firstName%>.</p>
+
+        <h2>Create New Trip Book</h2>
+    </body>
+</html>

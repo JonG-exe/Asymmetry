@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Eagle+Lake&family=Quattrocento+Sans&family=Vollkorn+SC&display=swap");
+
+:root{
+    --object-position-prop: 50% 50%;
+    --animation-duration-prop: 4s;
+    --animation-delay-prop: 1s;
+    --final-background-image: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#author {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    height: 12%;
+    position: relative;
+    background-color: rgba(0,0,0, 0.08);
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 40%;
+    height: 10vh;
+    
+    list-style: none;
+}
+
+nav ul .li {
+    margin-top: 3%;
+    margin-right: 10%;
+}
+
+nav ul .li:hover {
+    border-bottom: 4px solid orange;
+    transition: all 0.1s ease;
+}
+
+#firstAnchor {
+    margin-left: 27%;
+    /* border-bottom: 4px solid orange; */
+    /* if you're trying to find where the style for this is activated,
+    it's in the script in the "layout.ejs" file. YW :) */
+}
+
+#signUp {
+    position: absolute;
+    top: 0;
+    right: 21px;
+
+    margin-top: 2%;
+    margin-right: 12%;
+}
+
+#signUp img {
+    width: 27px;
+}
+
+a  {
+    text-decoration: none;
+    font-family: "Cinzel", "Vollkorn SC";
+
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+    outline: 1px;
+}
+
+#logo {
+
+    margin-left: 140%;
+    transform: scale(1.6);
+    height: 8px;
+
+    margin-right: auto;
+    margin-top: 2%;
+
+    border-bottom: 46px solid black;
+    border-right: 23px solid transparent;
+    border-left: 23px solid transparent;
+}
+
+#logo::after {
+    content: "";
+    position: absolute;
+
+    /* border-bottom: 50px solid rgba(255, 115, 0); */
+    border-bottom: 50px solid rgba(0,0,0, 0.5);
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+
+    transform: scale(0.7);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    height: 88%;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+main .main-content {
+    margin-top: 12vh;
+    margin-left: 10vw;
+
+    flex: 0 0 50%;
+    position: relative;
+
+    transform: scale(1.25) translate(100px, 40px);
+}
+
+p {
+    font-family: 'Quattrocento Sans';
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#learnMore {
+    margin-top: 20px;
+    padding: 9px 15px;
+    background-color: orange;
+
+    /* background-color: rgb(32, 210, 230); */
+
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-size: 1.1em;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px grey;
+
+    transition: all .5s;
+
+    border-radius: 5px;
+    border: 2px solid orange;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: orange;
+}
+
+#learnMore:hover {
+    transform: translateY(-2px);
+    transition: all 0.25s;
+    box-shadow: 4px 4px 4px grey;
+}
+
+#learnMore:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0.5px 0.5px 4px grey;
+
+    transition: all 0.3s;
+}
+
+main section button:hover {
+    cursor: pointer;
+}
+
+.h1-BarAccent {
+    position: absolute;
+    left: -22px;
+    top: 8.5px;
+
+    width: 9px;
+    height: 99px;
+    border: 1px solid orange;
+    border-radius: 3px;
+    background-color: orange;
+}
+
+h1 {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 2.8em;
+}
+
+main .img {
+    object-fit: cover;
+    height: 0;
+}
+
+.img1 {
+    margin-top: 8vh;
+    margin-left: 8vh;
+    position: relative;
+
+    --image-width-one: 35vh;
+    --image-width-two: 50vh;
+    --image-height: 35vh;
+    --animation-duration-prop: 5s;
+    --animation-delay-prop: 1s;
+    --final-background-image: url("../images/BlueLake.jpg");
+}
+
+.img2 {
+    position: absolute;
+    top: 33vh;
+    right: 65vh;
+
+    --image-width-zero: 3.75vh;
+    --image-width-one: 6.5vh;
+    --image-width-two: 13vh;
+    --image-height: 13vh;
+    --animation-duration-prop: 4.75s;
+    --animation-delay-prop: 1.3s;
+    --final-background-image: url("../images/NightSky.jpg");
+}
+
+.nestedImg {
+    position: relative;
+    margin-top: -12vh;
+    margin-left: 90vh;
+    height: 27vh;
+    width: 45vh;
+}
+
+
+.img3 {
+    object-position: 50% 30%;
+
+    --image-width-one: 22.5vh;
+    --image-width-two: 45vh;
+    --image-height: 27vh;
+    --object-position-prop: 50% 30%;
+    --animation-duration-prop: 4.5s;
+    --animation-delay-prop: 1s;
+    --final-background-image: url("../images/DesertCastle.jpg");
+}
+
+.insideImg {
+    background-color: #FF6600;
+    border-bottom: 8px solid rgb(43, 37, 37);
+    color: white;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    bottom: -100%;
+    height: 14vh;
+    width: 23vh;
+    animation-name: insideImgAnimation;
+    animation-duration: 2.5s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.insideImg > p {
+    color: white;
+}
+
+@keyframes insideImgAnimation {
+    from {
+        position: absolute;
+        left: 40%;
+        bottom: -100%;
+    }
+    to {
+        position: absolute;
+        left: 40%;
+        bottom: -37%;
+    }
+}
+
+.img4 {
+    margin-top: -10vh;
+    margin-left: 14vh;
+
+    --image-width-one: 12.5vh;
+    --image-width-two: 25vh;
+    --image-height: 20vh;
+    --animation-duration-prop: 4.25s;
+    --animation-delay-prop: 0.75s;
+    --final-background-image: url("../images/BedsideView.jpg");
+}
+
+.img5 {
+    position: relative;
+    left: -55%;
+    bottom: -15.5%;
+
+    --image-width-one: 12.5vh;
+    --image-width-two: 25vh;
+    --image-height: 15vh;
+    --animation-duration-prop: 4s;
+    --animation-delay-prop: 1s;
+    --final-background-image: url("../images/passports.jpg");
+}
+
+#right-bar_1 {
+    background-color: orange;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+}
+
+#right-bar_2 {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    opacity: 0.8;
+}
+
+.triLoadImg {
+    animation-name: flipLoad;
+    animation-duration: var(--animation-duration-prop);
+    animation-delay: var(--animation-delay-prop);
+
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipLoad {
+    0% {
+        transform: rotate(0deg);
+        width: 0;
+        height: 0;
+
+        opacity: 0;
+
+        background-image: none;
+        background-color: none;
+        background-size: none;
+        background-repeat: no-repeat;
+        box-shadow: none;
+        
+        position: relative;
+        border-bottom: 46px solid black;
+        border-right: 23px solid transparent;
+        border-left: 23px solid transparent;
+        border-bottom-left-radius: none;
+        object-position: var(--object-position-prop);
+    }
+    35% {
+        transform: rotate(0deg);
+        width: 0;
+        height: 0;
+
+        opacity: 1;
+
+        background-image: none;
+        background-color: none;
+        background-size: none;
+        background-repeat: no-repeat;
+        box-shadow: none;
+        
+        position: relative;
+        border-bottom: 46px solid black;
+        border-right: 23px solid transparent;
+        border-left: 23px solid transparent;
+        border-bottom-left-radius: none;
+        object-position: var(--object-position-prop);
+    }
+    50% {
+        transform: rotate(180deg);
+        width: 0;
+        height: var(--image-height);
+
+        background-image: none;
+        background-color: none;
+        background-size:cover;
+        background-repeat: no-repeat;
+        /* box-shadow: -4px -4px 5px grey; */
+        box-shadow: none;
+
+        position: relative;
+        border-bottom: 11.5px solid black;
+        border-right: 5.75px solid transparent;
+        border-left: 5.75px solid transparent;
+        border-bottom-left-radius:  2px;
+        object-position: var(--object-position-prop);
+    }
+    60% {
+        transform: rotate(180deg);
+        width: var(--image-width-zero);
+        width: 20px;
+
+        height: var(--image-height);
+
+        /* background-color: orange; */
+        /* background-image: var(--final-background-image); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* box-shadow: -4px -4px 5px grey; */
+        box-shadow: none;
+
+        position: relative;
+        border-bottom: 11.5px solid black;
+        border-right: 5.75px solid transparent;
+        border-left: 5.75px solid transparent;
+        border-bottom-left-radius:  4px;
+        object-position: var(--object-position-prop);
+    }
+    75%{
+        transform: rotate(180deg);
+        width: var(--image-width-one);
+        height: var(--image-height);
+        
+        /* background-color: orange; */
+        /* background-image: var(--final-background-image); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* box-shadow: -4px -4px 5px grey; */
+        box-shadow: none;
+
+
+        position: relative;
+        border-bottom: 5.75px solid black;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom-left-radius:  4px;
+        object-position: var(--object-position-prop);
+    }
+    100% {
+        transform: rotate(180deg);
+        width: var(--image-width-two);
+        height: var(--image-height);
+
+        /* background-color: orange; */
+        /* background-image: var(--final-background-image); */
+        background-size:cover;
+        background-repeat: no-repeat;
+        box-shadow: -4px -4px 5px grey;
+
+        position: relative;
+        border-right: none;
+        border-left: none;
+        object-position: var(--object-position-prop);
+
+    }
+}
+
+
+
+.quad_repeats_1 {
+    position: absolute;
+    left: 0;
+    top: 49%;
+    width: 20px;
+
+    opacity: 0.3;
+}
+
+.quad_repeats_2 {
+    filter: invert(1);
+    position: absolute;
+    right: 30%;
+    top: -1.8%;
+    width: 20px;
+
+    transform: rotate(90deg);
+
+    opacity: 0.3;
+}
+
+h3 {
+    z-index: 2;
+
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: bold;
+    font-size: 2.4em;
+
+    position: absolute;
+    bottom: 68%;
+    right: 6%;
+    transform: rotate(90deg);
+    color: white;
+    opacity: 55%;
+}
+
+@keyframes image_flow{
+    0% {
+
+    }
+    100% {
+
+    }
+}
